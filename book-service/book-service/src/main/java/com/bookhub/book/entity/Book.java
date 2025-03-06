@@ -2,7 +2,7 @@ package com.bookhub.book.entity;
 
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -17,8 +17,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class Book {
 
-	@Id
+	@Indexed(unique = true)
 	private String isbn;
+	private String title;
 	private String author;
 	private String publisher;
 	private Date publishingDate;

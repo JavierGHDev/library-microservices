@@ -6,6 +6,7 @@ import com.bookhub.book.entity.Language;
 
 public record BookRequest(
 	String isbn,
+	String title,
 	String author,
 	String publisher,
 	Date publishingDate,
